@@ -1,9 +1,5 @@
-header {
-  font-family: 'Dyslexic-Re';
-}
-
 body {
-  font-family: 'Dyslexic-Regular';
+  font-family: "Dyslexic-Regular";
   margin: 0; 
   display: flex;
   justify-content: center; 
@@ -14,7 +10,7 @@ body {
 @font-face {
   font-family: "Dyslexic-Regular";
   src: local("OpenDyslexic-Regular"),
-    url("./font/OpenDyslexic-Regular.woff") format("woff");
+    url("/src/font/OpenDyslexic-Regular.woff") format("woff");
 }
 
 .search-container {
