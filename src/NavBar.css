@@ -1,0 +1,32 @@
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #0e2670;
+}
+
+li.navitem {
+  display: block;
+  color: #FFF1cB;
+  padding: 14px 16px;
+  text-align: center;
+}
+
+li.navitem.left {
+  float: left;
+}
+
+li.navitem.right {
+  float: right;
+}
+
+li.navitem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li.navitem:hover {
+  color: #0e2670;
+  background-color: #FFF1cB;
+}
