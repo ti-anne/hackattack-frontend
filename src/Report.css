@@ -1,5 +1,6 @@
 .report-container {
     background-color: white;
+    color: #0e2670;
     display: flex;
     margin:100px auto;
     flex-direction: column;
