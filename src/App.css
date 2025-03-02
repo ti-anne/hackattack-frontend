@@ -1,9 +1,16 @@
 body {
+  font-family: "Dyslexic-Regular";
   margin: 0; 
   display: flex;
   justify-content: center; 
   align-items: center;
   background-color: #faf6e6;
+}
+
+@font-face {
+  font-family: "Dyslexic-Regular";
+  src: local("OpenDyslexic-Regular"),
+    url("/src/font/OpenDyslexic-Regular.woff") format("woff");
 }
 
 .search-container {

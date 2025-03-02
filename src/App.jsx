@@ -2,7 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 import gam_nonfocus from './assets/gam_nonfocus.png';
 import gam_focus from './assets/gam_focus.png';
-import Report from './Report'; 
+import Report from './Report';
+import NavBar from './NavBar'; 
+
+import './font/OpenDyslexic-Regular.woff'
+import './font/OpenDyslexic-Italic.woff'
+import './font/OpenDyslexic-Bold.woff'
+import './font/OpenDyslexic-Bold-Italic.woff'
 
 function App() {
   const [isInputFocused, setIsInputFocused] = useState(false);
@@ -41,6 +47,7 @@ function App() {
 
   return (
     <>
+    <NavBar />
     <div className="container">
       <div className='search-container'>
         <img
