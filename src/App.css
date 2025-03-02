@@ -13,6 +13,17 @@ body {
     url("/src/font/OpenDyslexic-Regular.woff") format("woff");
 }
 
+.info-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 100px;
+}
+
+.info {
+  margin: 5px 0;
+}
+
 .search-container {
   margin: auto;
   display: flex;

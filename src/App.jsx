@@ -64,6 +64,15 @@ function App() {
     <>
     <NavBar />
     <div className="container">
+      <div className='info-container'>
+        <h1>Accessibility Checker</h1>
+        <p className='info'>
+          Not sure if your website is accessible enough? Put the link to your website below and we'll check for you!
+        </p>
+        <p className='info'>
+          Our website aims to educate web developers on web accessibility and guide you towards making the most accessible website possible.
+        </p>
+      </div>
       <div className='search-container'>
         <img
           src={isInputFocused ? gam_focus : gam_nonfocus}
