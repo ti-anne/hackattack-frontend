@@ -63,3 +63,17 @@ body {
 .submit-button:hover {
   background-color: #97adf0;
 }
+
+#gam1 {
+  position: absolute;
+  top: 450px;
+  right: 1100px;
+  width: 100px;
+}
+
+#gam2 {
+  position: absolute;
+  top: 465px;
+  right: 220px;
+  width: 100px;
+}

@@ -15,7 +15,7 @@ const Report = ({ url }) => {
   };
 
   return (
-    <div className="report-container">
+    <div className="report-container" id="report">
 
       <h1>Report for {url}</h1>
       <div className='overall'>
