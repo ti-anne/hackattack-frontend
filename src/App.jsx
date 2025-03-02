@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import gam_nonfocus from './assets/gam_nonfocus.png';
 import gam_focus from './assets/gam_focus.png';
+import gam_moving from './assets/spwalk.gif'
 import Report from './Report';
 import NavBar from './NavBar'; 
+import { motion, useScroll } from "framer-motion";
 
 import './font/OpenDyslexic-Regular.woff'
 import './font/OpenDyslexic-Italic.woff'
@@ -15,6 +17,17 @@ function App() {
   const [inputValue, setInputValue] = useState(''); 
   const [showReport, setShowReport] = useState(false); 
   const [submittedUrl, setSubmittedUrl] = useState(''); 
+
+  const { scrollYProgress } = useScroll();
+  const [gifPosition, setGifPosition] = useState(0);
+
+  useEffect(() => {
+    const unsubscribe = scrollYProgress.on("change", (progress) => {
+      setGifPosition(progress * 90); 
+    });
+
+    return () => unsubscribe();
+  }, [scrollYProgress]);
 
   const handleInputFocus = () => {
     setIsInputFocused(true);
@@ -71,6 +84,18 @@ function App() {
     
       {showReport && <Report url={submittedUrl} />}
     </div>
+    <motion.img
+        src={gam_moving}
+        alt="Moving GIF"
+        className="moving-gif"
+        style={{
+          position: "fixed",
+          bottom: "10px",
+          left: `${gifPosition}%`, // Moves left to right as you scroll
+          width: "100px",
+          height: "auto",
+        }}
+      />
     </>
   );
 }
