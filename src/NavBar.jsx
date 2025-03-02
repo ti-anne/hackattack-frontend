@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './NavBar.css'
+import sp1 from './assets/sp1.gif';
 
 export default function NavBar() {
     const [login, setLogin] = useState(false);
@@ -26,7 +27,9 @@ export default function NavBar() {
                 ) : (
                   <>
                     <li class='navitem right sign'><button onClick={handleUser}>Sign Up</button></li>
-                    <li class='navitem right'><a href="/logIn">Login</a></li>
+                    <li class='navitem right'>
+                      <img src={sp1} alt="sp1 gif" className="nav-gif"/>
+                      <a href="/logIn">Login</a></li>
                   </>
                 )}
                 <li class='navitem right'>Darkmode</li>
