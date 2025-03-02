@@ -27,6 +27,14 @@ li.navitem.left {
 
 li.navitem.right {
   float: right;
+  display: flex;
+  align-items: center;
+}
+
+li.navitem.right .nav-gif{
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
 }
 
 li.navitem.log:hover, li.navitem.sign:hover {
