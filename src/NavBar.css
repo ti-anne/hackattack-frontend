@@ -31,6 +31,7 @@ li.navitem.right {
 
 li.navitem.log:hover, li.navitem.sign:hover {
   background-color: #0e2670;
+  color: inherit;
 }
 
 li.navitem button {
@@ -39,6 +40,7 @@ li.navitem button {
   padding: 4px;
   margin: -9px;
   background-color: #435eb0;
+  color: inherit;
 }
 
 li.navitem button:hover {
