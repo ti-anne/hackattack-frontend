@@ -11,6 +11,7 @@ ul.navbar {
   padding: 0;
   overflow: hidden;
   background-color: #0e2670;
+  align-items: center;
 }
 
 li.navitem {
@@ -26,6 +27,23 @@ li.navitem.left {
 
 li.navitem.right {
   float: right;
+}
+
+li.navitem.log:hover, li.navitem.sign:hover {
+  background-color: #0e2670;
+}
+
+li.navitem button {
+  text-decoration: none;
+  border: 0;
+  padding: 4px;
+  margin: -9px;
+  background-color: #435eb0;
+}
+
+li.navitem button:hover {
+  color: #0e2670;
+  background-color: #97ADF0;
 }
 
 li.navitem a {

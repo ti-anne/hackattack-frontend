@@ -2,7 +2,7 @@ import { useState } from "react";
 import './NavBar.css'
 
 export default function NavBar() {
-    const [login, setLogin] = useState(true);
+    const [login, setLogin] = useState(false);
 
     const handleUser = () => {
       if (!login) {
@@ -20,13 +20,13 @@ export default function NavBar() {
                 <li class='navitem left'><a href='/resources'>Resources</a></li>
                 {login ? (
                   <>
-                    <li class='navitem right user'><a href="#" onClick={handleUser}>Log Out</a></li>
-                    <li class='navitem right user'><a href='/Report'>Reports</a></li>
+                    <li class='navitem right log'><button onClick={handleUser}>Log Out</button></li>
+                    <li class='navitem right'><a href='/Reports'>Reports</a></li>
                   </>
                 ) : (
                   <>
-                    <li class='navitem right sign'><a href='/signUp'>Sign Up</a></li>
-                    <li class='navitem right login'><a href="#" onClick={handleUser}>Login</a></li>
+                    <li class='navitem right sign'><button onClick={handleUser}>Sign Up</button></li>
+                    <li class='navitem right'><a href="/logIn">Login</a></li>
                   </>
                 )}
                 <li class='navitem right'>Darkmode</li>
