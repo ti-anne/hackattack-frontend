@@ -1,0 +1,25 @@
+.report-container {
+    background-color: white;
+    display: flex;
+    margin:100px auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 70px;
+    border-radius: 30px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gam-reaction {
+    width: 500px;
+}
+
+.overall {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

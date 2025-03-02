@@ -1,35 +1,71 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import './App.css';
+import gam_nonfocus from './assets/gam_nonfocus.png';
+import gam_focus from './assets/gam_focus.png';
+import Report from './Report'; 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isInputFocused, setIsInputFocused] = useState(false);
+  const [inputValue, setInputValue] = useState(''); 
+  const [showReport, setShowReport] = useState(false); 
+  const [submittedUrl, setSubmittedUrl] = useState(''); 
+
+  const handleInputFocus = () => {
+    setIsInputFocused(true);
+  };
+
+  const handleInputBlur = () => {
+    setIsInputFocused(false);
+  };
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value); 
+  };
+
+  const handleSubmit = () => {
+    if (inputValue.trim() === '') {
+      alert('Please enter a URL!'); 
+      return;
+    }
+
+    setSubmittedUrl(inputValue); 
+    setShowReport(true); 
+
+    setTimeout(() => {
+      const reportElement = document.getElementById('report');
+      if (reportElement) {
+        reportElement.scrollIntoView({ behavior: 'smooth' }); 
+      }
+    }, 1000);
+  };
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="container">
+      <div className='search-container'>
+        <img
+          src={isInputFocused ? gam_focus : gam_nonfocus}
+          alt="gamgam"
+          className="big-gam"
+        />
+      <input
+        name="url-input"
+        placeholder="Paste your URL here"
+        className="url-input"
+        value={inputValue}
+        onChange={handleInputChange}
+        onFocus={handleInputFocus}
+        onBlur={handleInputBlur}
+      />
+      <button className="submit-button" onClick={handleSubmit}>
+        Submit
+      </button>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    
+      {showReport && <Report url={submittedUrl} />}
+    </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
