@@ -5,8 +5,8 @@ import gam_focus from './assets/gam_focus.png';
 import gam_moving from './assets/spwalk.gif'
 import gam_spin from './assets/gamspin.gif'
 import gam_cry from './assets/spcry.gif'
-import Report from './Report';
-import NavBar from './NavBar'; 
+import Report from './Report.jsx';
+import NavBar from './NavBar.jsx'; 
 import { motion, useScroll } from "framer-motion";
 
 import './font/OpenDyslexic-Regular.woff'
@@ -64,7 +64,7 @@ function App() {
     <>
     <NavBar />
     <div className="container">
-      <div className='info-container'>
+    <div className='info-container'>
         <h1>Accessibility Checker</h1>
         <p className='info'>
           Not sure if your website is accessible enough? Put the link to your website below and we'll check for you!
